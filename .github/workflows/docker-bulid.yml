@@ -5,8 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out respository code
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
       - name: docker image build
-      - run: docker build -t cqhaisenbao/web-test:lastest .
+        run: docker build -t cqhaisenbao/web-test:lastest .
       - name: list docker image
-      - run: docker image ls
+        run: docker image ls
