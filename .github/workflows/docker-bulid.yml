@@ -10,3 +10,7 @@ jobs:
         run: docker build -t cqhaisenbao/web-test:lastest .
       - name: list docker image
         run: docker image ls
+      - name: dockerhub login
+        run: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_PSAAWORD }}
+      - name: push to dockerhub
+        run: docker image push cqhaisenbao/web-test:lastest
